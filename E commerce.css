@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Alkatra', cursive;
+}
+
+/* body {
+  background-color: black;
+} */
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  width: auto;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  width: 50rem;
+  height: 390px;
+  background-color: rgba(255, 255, 255, 0.418);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+p span {
+  font-weight: bold;
+  font-size: 19px;
+
+}
+
+.btn {
+  position: relative;
+  border: 1px solid black;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  margin: 38px;
+  cursor: pointer;
+  /* background-color: rgb(0, 238, 255); */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: transparent;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ff004f;
+  z-index: -1;
+  transition: 0.4s;
+
+}
+
+
+.btn:hover:before {
+  width: 100%;
+}
+
+
+.nav-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 50px;
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.418);
+  backdrop-filter: blur(20px);
+  /* border-radius: 40px; */
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.menu-bar ul li {
+  display: inline-block;
+  padding: 20px 10px;
+  text-align: center;
+  margin: 0px 40px;
+  font-weight: 600;
+
+}
+
+.menu-bar i {
+  display: none;
+}
+
+.menu-bar ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+.menu-bar ul li a:hover {
+  color: #ff004f;
+}
+
+
+
+/* -----ABOUT SECTION------ */
+#all {
+  padding: 50px 130px;
+  background-color: black;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.col-1 img {
+  width: 305px;
+  height: 425px;
+  border-radius: 17px;
+  color: whitesmoke;
+}
+
+
+.col-1 {
+  flex-basis: 35%;
+}
+
+.col-2 {
+  color: whitesmoke;
+  flex-basis: 60%;
+
+}
+
+.col-2 h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 12px 10px;
+}
+
+.tab-title {
+  display: flex;
+  margin: 25px 6px 32px;
+
+}
+
+.tab-links {
+  margin-right: 70px;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+}
+
+/* 
+.tab-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgb(185, 137, 33);
+  margin: auto;
+  transition: all 0.4s;
+}
+
+ <---this is a second option of hover effect----> 
+
+.tab-link:hover::after {
+  width: 100%;
+} */
+
+.tab-links.active-link::after {
+  color: rgb(90, 8, 167);
+  width: 50%;
+}
+
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: rgb(90, 8, 167);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.4s ease;
+}
+
+.tab-links:hover::after {
+  width: 100%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  font-size: 17px;
+  color: #ff004f;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/*---------- Service----------- */
+
+#service {
+  padding: 30px 0;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.sub-title {
+  font-size: 40px;
+  margin: 0 30px;
+  color: whitesmoke;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 55px;
+  padding: 26px 40px;
+
+}
+
+.service-list div {
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  background-color: #262626;
+  border-radius: 20px;
+  transition: background 0.6s, transfrom 0.6s;
+}
+
+.service-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.service-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.service-list div a {
+  text-decoration: none;
+  color: azure;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.service-list div:hover {
+  background-color: #ff004f;
+  transform: translateY(-10px);
+}
+
+/*------------- Portfolio------------- */
+
+#work {
+  padding: 50px 0;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  margin: 20px 20px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  /* width: 400px;
+  /* height: 450px; */
+}
+
+.work img {
+  width: 100%;
+  /* height: 450px; */
+  border-radius: 10px;
+  display: block;
+  transition: transfrom 0.5s;
+
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 1px;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  font-size: 18px;
+  margin-top: 20px;
+  /* background: #fff;   */
+  line-height: 60px;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn-1 {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  padding: 12px 30px;
+  border: 1px solid #ff004f;
+  border-radius: 10px;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: background 0.5s;
+}
+
+.btn-1:hover {
+  background: #ff004f;
+}
+
+/* -------contact--------- */
+
+.divrow {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.contact-left {
+  flex-basis: 35%;
+  margin-left: 10px;
+  padding-bottom: 15px;
+}
+
+.contact-left p {
+  margin-top: 20px;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p i {
+  margin-right: 16px;
+  color: #ff004f;
+  font-size: 24px;
+
+}
+
+.icon {
+  margin-top: 30px;
+}
+
+.icon a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #5c5959;
+  margin-right: 15px;
+  display: inline-block;
+  transition: translate 0.5s;
+
+}
+
+.icon a :hover {
+  color: #ff004f;
+  transform: translatey(-6px);
+}
